@@ -1,23 +1,20 @@
 <template>
   <div id="app">
-    <transition name="fade">
-    <div class="wrapper"> <!-- for reasons -->
-      <div class="main-content end-animation" v-bind:style="{ width: computedWidthB }" @mouseover="changeWidthB()" @mouseleave="resetWidth()">
-        <button @click="changeAccueil" v-if="computedWidthB === '90%'" class="btn btn-primary">lol {{ accueil }}</button>
+        <div class="wrapper">
 
-      </div>
+          <div class="main-content end-animation" v-bind:style="{ width: computedWidthB }" @mouseover="changeWidthB()" @mouseleave="resetWidth()">
+            <div @click="changeAccueil" v-if="computedWidthB === '90%'"><a href="#guide1" class="btn btn-primary">lol {{ accueil }}</a></div>
+          </div>
 
-      <div class="aside end-animation" v-bind:style="{ width: computedWidthO }" @mouseover="changeWidthO()" @mouseleave="resetWidth()">
-      </div>
+          <div class="aside end-animation" v-bind:style="{ width: computedWidthO }" @mouseover="changeWidthO()" @mouseleave="resetWidth()">
+          </div>
 
-    </div>
-    </transition>
-    <button @click="changeAccueil" v-if="!accueil">lol {{ accueil }}</button>
+        </div>
 
-    <guide v-if="!accueil" id="guide"></guide>
-    <transition name="fade">
+
+    <guide v-if="!accueil"></guide>
     <switcher v-if="!accueil"></switcher>
-    </transition>
+
 
 
 

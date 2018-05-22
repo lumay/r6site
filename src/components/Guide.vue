@@ -1,6 +1,7 @@
 <template>
 
-  <div id="guide" class="bite">
+  <div id="guide">
+    <button @click="changeAccueil" v-if="!accueil">Revenir à l'accueil</button>
     <h4><b>CASUAL</b></h4>
     <div class="col"><p>After a space capsule crashed in New Mexico, an Outbreak and a surge of violence forced the authorities to establish a Quarantine Zone around Truth or Consequences.
 
@@ -72,11 +73,11 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
   body {
 
   }
-#app {
+#guide {
   font-family: 'Avenir', "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -84,10 +85,10 @@ export default {
   color: #2c3e50;
   background-color: dimgrey;
 }
-.bite{
-  /*background-url:('/src/img/Background.jpg');
-  background-size:100% auto;*/
-}
+/*.bite{
+  background-url:('/src/img/Background.jpg');
+  background-size:100% auto;
+}*/
   .center{
     position: fixed;
     top: 50%;

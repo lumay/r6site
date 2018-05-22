@@ -6,7 +6,6 @@
         <img v-bind:src="imageLink"/>
       </div>
       </div>
-      <p> {{text}} </p>
     </div>
   </div>
 </template>
@@ -46,7 +45,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #app {
+  #switcher {
     font-family: 'Avenir', "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
